@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/home_screen.dart';
+import 'package:recipe_app/FooderlichTheme.dart';
+import 'package:recipe_app/view/screens/home_screen.dart';
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: FooderlichTheme.bgColor,
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.push(

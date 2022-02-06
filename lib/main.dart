@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/welcome_screen.dart';
+import 'package:recipe_app/view/screens/welcome_screen.dart';
 
 void main() => runApp(const Fooderlich());
 
@@ -13,7 +13,7 @@ class Fooderlich extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const         Welcome(),
+      home: const Welcome(),
     );
   }
 }
