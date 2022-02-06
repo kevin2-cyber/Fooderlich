@@ -2,6 +2,7 @@
 
  Recipes app
 
-## Getting Started
+## Getting Started 
 
-Using the flutter apprentice book as a guide
+Using the flutter apprentice book as a guide.
+Using Model View Controller as an architectural pattern. 
