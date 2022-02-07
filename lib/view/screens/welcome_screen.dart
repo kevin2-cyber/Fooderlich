@@ -7,7 +7,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: FooderlichTheme.bgColor,
+      backgroundColor: FooderlichTheme.kbgColor,
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.push(
@@ -17,6 +17,7 @@ class Welcome extends StatelessWidget {
               ),
           );
         },
+        tooltip: 'Welcome',
         child: const Icon(
           Icons.arrow_forward_ios,
         ),

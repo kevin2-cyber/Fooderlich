@@ -2,5 +2,9 @@ import 'package:flutter/material.dart';
 
 class FooderlichTheme {
 
-  static const bgColor = Colors.black54;
+  static const kbgColor = Color(0xFF121212);
+
+  static final ThemeData themeData = ThemeData.dark().copyWith(
+    scaffoldBackgroundColor: kbgColor,
+  );
 }
