@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:recipe_app/FooderlichTheme.dart';
+import 'package:recipe_app/view/FooderlichTheme.dart';
 
 
 class Card1 extends StatelessWidget {

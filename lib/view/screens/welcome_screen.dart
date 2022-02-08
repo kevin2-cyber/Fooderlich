@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/FooderlichTheme.dart';
+import 'package:recipe_app/view/FooderlichTheme.dart';
 import 'package:recipe_app/view/screens/cards/card1.dart';
 import 'package:recipe_app/view/screens/cards/card2.dart';
 import 'package:recipe_app/view/screens/cards/card3.dart';

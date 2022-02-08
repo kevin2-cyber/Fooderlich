@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/FooderlichTheme.dart';
+import 'package:recipe_app/view/FooderlichTheme.dart';
 import 'package:recipe_app/view/screens/welcome_screen.dart';
 
 void main() => runApp(const Fooderlich());
