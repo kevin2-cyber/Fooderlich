@@ -54,13 +54,13 @@ class _WelcomeState extends State<Welcome> {
               icon: Icon(
                   Icons.card_giftcard,
               ),
-              label: 'Card2',
+              label: 'Author',
           ),
           BottomNavigationBarItem(
               icon: Icon(
                   Icons.card_giftcard,
               ),
-              label: 'Card3',
+              label: 'Trends',
           ),
         ],
       ),
