@@ -22,15 +22,15 @@ class Card2 extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
         ),
         child: Column(
-          children: [
-            AuthorCard(
+          children: <Widget>[
+            const AuthorCard(
               authorName: 'Mike Katz',
               title: 'Smoothie Connoisseur',
               imageProvider: AssetImage('assets/author_katz.jpeg'),
             ),
            Expanded(
              child: Stack(
-               children: [
+               children: <Widget>[
                  Positioned(
                    bottom: 16,
                    right: 16,
