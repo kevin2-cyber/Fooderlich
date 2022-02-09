@@ -12,7 +12,6 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-  //TODO: Add state variables and functions
   int _selectedIndex = 0;
 
   static List<Widget> pages = <Widget>[
