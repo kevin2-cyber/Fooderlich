@@ -10,7 +10,6 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO 1: Add TodayRecipeListView FutureBuilder
     return FutureBuilder(
       future: mockService.getExploreData(),
       builder: (context, AsyncSnapshot<ExploreData> snapshot) {
@@ -21,7 +20,6 @@ class ExploreScreen extends StatelessWidget {
               TodayRecipeListView(recipes:
               snapshot.data?.todayRecipes ?? []),
               const SizedBox(height: 16),
-              // TODO: Replace this with FriendPostListView
               FriendPostListView(friendPosts: snapshot.data?.friendPosts ?? []),
             ],
           );
