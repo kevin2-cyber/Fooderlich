@@ -18,18 +18,14 @@ class RecipeThumbnail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: ClipRect(
+              child: ClipRRect(
                 child: Image.asset(
                   recipe.dishImage,
                   fit: BoxFit.cover,
                 ),
+                borderRadius: BorderRadius.circular(12),
               ),
             ),
-          ),
           const SizedBox(
               height: 10,
           ),
