@@ -22,7 +22,7 @@ class RecipesScreen extends StatelessWidget {
         {
           return RecipesGridView(recipes: snapshot.data ?? []);
           // 5
-          return const Center(child: Text('Recipes Screen'));
+          //return const Center(child: Text('Recipes Screen'));
         } else {
           // 6
           return const Center(child:
