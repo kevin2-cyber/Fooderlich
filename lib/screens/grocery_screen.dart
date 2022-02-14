@@ -34,7 +34,7 @@ class GroceryScreen extends StatelessWidget {
       body: buildGroceryScreen(),
     );
   }
-// TODO: Add buildGroceryScreen
+
   Widget buildGroceryScreen() {
     // 1
     return Consumer<GroceryManager>(
