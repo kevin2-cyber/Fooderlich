@@ -15,12 +15,10 @@ class Fooderlich extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: theme,
       title: 'Fooderlich',
-      // TODO 8: Replace this with MultiProvider
       home: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => TabManager()),
           ChangeNotifierProvider(create: (context) => GroceryManager()),
-
         ],
         child: const Home(),
       ),
