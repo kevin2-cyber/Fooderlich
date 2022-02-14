@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/grocery_tile.dart';
 import '../models/models.dart';
-import 'grocery_item_screen.dart';
+import 'screens.dart';
 
 class GroceryListScreen extends StatelessWidget {
   final GroceryManager manager;

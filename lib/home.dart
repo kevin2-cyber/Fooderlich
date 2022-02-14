@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooderlich/models/models.dart';
-import 'package:fooderlich/screens/explore_screen.dart';
-import 'package:fooderlich/screens/grocery_screen.dart';
-import 'package:fooderlich/screens/recipes_screen.dart';
+import 'screens/screens.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
