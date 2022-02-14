@@ -31,6 +31,20 @@ class _HomeState extends State<Home> {
       builder: (context, tabManager, child) {
         return Scaffold(
           appBar: AppBar(
+            actions: [
+              IconButton(
+                  onPressed: (){},
+                  icon: const Icon(
+                    Icons.wb_sunny,
+                  ),
+              ),
+              IconButton(
+                onPressed: (){},
+                icon: const Icon(
+                  Icons.nightlight_round,
+                ),
+              ),
+            ],
             title: Center(
               child: Text(
                 'Fooderlich',
