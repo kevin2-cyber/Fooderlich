@@ -13,6 +13,7 @@ class Fooderlich extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: theme,
       title: 'Fooderlich',
+      // TODO 8: Replace this with MultiProvider
       home: const Home(),
     );
   }
