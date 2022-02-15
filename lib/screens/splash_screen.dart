@@ -22,12 +22,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Image(
+          children: const [
+            Image(
               height: 200,
               image: AssetImage('assets/fooderlich_assets/rw_logo.png'),
             ),
-            const Text('Initializing...'),
+            Text('Initializing...'),
           ],
         ),
       ),

@@ -7,11 +7,8 @@ import 'models/profile_manager.dart';
 import 'screens/splash_screen.dart';
 // TODO: Import app_router
 
-void main() {
-  runApp(
-    const Fooderlich(),
-  );
-}
+void main() => runApp(const Fooderlich());
+
 
 class Fooderlich extends StatefulWidget {
   const Fooderlich({Key? key}) : super(key: key);
@@ -50,6 +47,7 @@ class _FooderlichState extends State<Fooderlich> {
           }
 
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: theme,
             title: 'Fooderlich',
             // TODO: Replace with Router widget

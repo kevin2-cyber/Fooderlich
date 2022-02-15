@@ -1,5 +1,5 @@
 import'package:flutter/material.dart';
-import 'package:fooderlich/models/models.dart';
+import 'package:recipe_app/models/models.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
