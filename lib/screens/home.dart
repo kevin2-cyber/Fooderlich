@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-// import 'package:fooderlich/models/models.dart';
+import '../models/models.dart';
 import 'screens.dart';
 // import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
-  // TODO: Home MaterialPage Helper
+  // Home MaterialPage Helper
+  static MaterialPage page(int currentTab) {
+    return MaterialPage(
+      name: FooderlichPages.home,
+      key: ValueKey(FooderlichPages.home),
+      child: Home(
+        currentTab: currentTab,
+      ),
+    );
+  }
 
   const Home({
     Key? key,
