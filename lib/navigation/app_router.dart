@@ -20,12 +20,12 @@ class AppRouter extends RouterDelegate
   })
       : navigatorKey = GlobalKey<NavigatorState>() {
 
-    // TODO: Add Listeners
+    // Add Listeners
     appStateManager.addListener(notifyListeners);
     groceryManager.addListener(notifyListeners);
     profileManager.addListener(notifyListeners);
   }
-  // TODO: Dispose listeners
+  // Dispose listeners
   @override
   void dispose() {
     appStateManager.removeListener(notifyListeners);
@@ -40,17 +40,17 @@ class AppRouter extends RouterDelegate
     return Navigator(
       // 8
       key: navigatorKey,
-      // TODO: Add onPopPage
+      // onPopPage
       onPopPage: _handlePopPage,
       // 9
       pages: [
-        // TODO: Add SplashScreen
+        // SplashScreen
         if (!appStateManager.isInitialized) SplashScreen.page(),
-        // TODO: Add LoginScreen
+        // LoginScreen
         if (appStateManager.isInitialized && !appStateManager.isLoggedIn)LoginScreen.page(),
-        // TODO: Add OnboardingScreen
+        // OnboardingScreen
         if (appStateManager.isLoggedIn && !appStateManager.isOnboardingComplete)OnboardingScreen.page(),
-        // TODO: Add Home
+        // Home
         if (appStateManager.isOnboardingComplete)Home.page(appStateManager.getSelectedTab),
         // TODO: Create new item
         // TODO: Select GroceryItemScreen
@@ -59,7 +59,7 @@ class AppRouter extends RouterDelegate
       ],
     );
   }
-  // TODO: Add _handlePopPage
+  // _handlePopPage
   bool _handlePopPage(
       // 1
       Route<dynamic> route,
@@ -71,7 +71,7 @@ class AppRouter extends RouterDelegate
       return false;
     }
     // 5
-    // TODO: Handle Onboarding and splash
+    // Handle Onboarding and splash
     if (route.settings.name == FooderlichPages.onboardingPath) {
       appStateManager.logout();
     }
