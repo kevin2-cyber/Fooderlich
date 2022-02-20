@@ -5,7 +5,14 @@ import '../components/circle_image.dart';
 import '../models/models.dart';
 
 class ProfileScreen extends StatefulWidget {
-  // TODO: ProfileScreen MaterialPage Helper
+  // ProfileScreen MaterialPage Helper
+  static MaterialPage page(User user) {
+    return MaterialPage(
+      name: FooderlichPages.profilePath,
+      key: ValueKey(FooderlichPages.profilePath),
+      child: ProfileScreen(user: user),
+    );
+  }
 
   final User user;
   const ProfileScreen({
@@ -25,7 +32,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: IconButton(
           icon: const Icon(Icons.close),
           onPressed: () {
-            // TODO: Close Profile Screen
+            // Close Profile Screen
+            Provider.of<ProfileManager>(context, listen: false).tapOnProfile(false);
           },
         ),
       ),
@@ -51,13 +59,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ListTile(
           title: const Text('View raywenderlich.com'),
           onTap: () {
-            // TODO: Open raywenderlich.com webview
+            // Open raywenderlich.com webview
+            Provider.of<ProfileManager>(context, listen: false).tapOnRaywenderlich(true);
           },
         ),
         ListTile(
           title: const Text('Log out'),
           onTap: () {
-            // TODO: Logout user
+            // Logout user
+            // 1
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnProfile(false);
+// 2
+            Provider.of<AppStateManager>(context, listen: false).logout();
           },
         )
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/models.dart';
 import 'screens.dart';
 // import 'package:provider/provider.dart';
@@ -28,48 +29,52 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
-    ExploreScreen(),
+    const ExploreScreen(),
     RecipesScreen(),
     const GroceryScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Wrap Consumer for AppStateManager
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Fooderlich',
-          style: Theme.of(context).textTheme.headline6,
+    // Wrap Consumer for AppStateManager
+    return Consumer<AppStateManager>(
+      builder: (context, appStateManager, child) {
+        return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Fooderlich',
+            style: Theme.of(context).textTheme.headline6,
+          ),
+          actions: [
+            profileButton(),
+          ],
         ),
-        actions: [
-          profileButton(),
-        ],
-      ),
-      body: IndexedStack(index: widget.currentTab, children: pages),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-        currentIndex: widget.currentTab,
-        onTap: (index) {
-          // TODO: Update user's selected tab
-        },
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Recipes',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'To Buy',
-          ),
-        ],
-      ),
+        body: IndexedStack(index: widget.currentTab, children: pages),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+          currentIndex: widget.currentTab,
+          onTap: (index) {
+            // Update user's selected tab
+            Provider.of<AppStateManager>(context, listen: false).goToTab(index);
+          },
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.explore),
+              label: 'Explore',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Recipes',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              label: 'To Buy',
+            ),
+          ],
+        ),
+      );
+    },
     );
-    // TODO: Add closing },);
   }
 
   Widget profileButton() {
@@ -83,7 +88,8 @@ class _HomeState extends State<Home> {
           ),
         ),
         onTap: () {
-          // TODO: home -> profile
+          // home -> profile
+          Provider.of<ProfileManager>(context, listen: false).tapOnProfile(true);
         },
       ),
     );

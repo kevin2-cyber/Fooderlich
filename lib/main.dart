@@ -63,7 +63,8 @@ class _FooderlichState extends State<Fooderlich> {
             // Replace with Router widget
             home:  Router(
               routerDelegate: _appRouter,
-              // TODO: Add backButtonDispatcher
+              // Add backButtonDispatcher
+              backButtonDispatcher: RootBackButtonDispatcher(),
             ),
           );
         },
