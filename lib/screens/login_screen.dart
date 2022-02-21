@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/fooderlich_theme.dart';
 import 'package:provider/provider.dart';
 
 import '../models/models.dart';
 
 class LoginScreen extends StatelessWidget {
+  get rwColor => FooderlichTheme.rwColor;
+
   // LoginScreen MaterialPage Helper
   static MaterialPage page() {
     return MaterialPage(
@@ -20,9 +23,6 @@ class LoginScreen extends StatelessWidget {
     this.username,
   }) : super(key: key);
 
-  final Color rwColor = const Color.fromRGBO(64, 143, 77, 1);
-  final TextStyle focusedStyle = const TextStyle(color: Colors.green);
-  final TextStyle unfocusedStyle = const TextStyle(color: Colors.grey);
 
   @override
   Widget build(BuildContext context) {

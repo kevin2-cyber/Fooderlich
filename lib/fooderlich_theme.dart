@@ -68,10 +68,10 @@ class FooderlichTheme {
       ),
       appBarTheme: const AppBarTheme(
         foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        backgroundColor: lightBgColor,
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
+        foregroundColor: lightBgColor,
         backgroundColor: Colors.black,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -80,16 +80,20 @@ class FooderlichTheme {
       textTheme: lightTextTheme,
     );
   }
+  static const lightBgColor = Color(0xFFF6FAFF);
+  static const rwColor = Color.fromRGBO(64, 143, 77, 1);
+  final TextStyle focusedStyle = const TextStyle(color: Colors.green);
+  final TextStyle unfocusedStyle = const TextStyle(color: Colors.grey);
 
   static ThemeData dark() {
     return ThemeData(
       brightness: Brightness.dark,
       appBarTheme: AppBarTheme(
-        foregroundColor: Colors.white,
+        foregroundColor: lightBgColor,
         backgroundColor: Colors.grey[900],
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
+        foregroundColor: lightBgColor,
         backgroundColor: Colors.green,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
