@@ -5,7 +5,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../models/models.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  // TODO: Add OnboardingScreen MaterialPage Helper
+  // Add OnboardingScreen MaterialPage Helper
   static MaterialPage page() {
     return MaterialPage(
       name: FooderlichPages.onboardingPath,
@@ -60,7 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         MaterialButton(
           child: const Text('Skip'),
           onPressed: () {
-            // TODO: Onboarding -> Navigate to home
+            // Onboarding -> Navigate to home
             Provider.of<AppStateManager>(context, listen: false).completeOnboarding();
           },
         ),

@@ -14,7 +14,7 @@ class GroceryItemScreen extends StatefulWidget {
   final int index;
   final bool isUpdating;
 
-  // TODO: GroceryItemScreen MaterialPage Helper
+  // GroceryItemScreen MaterialPage Helper
   static MaterialPage page({
     GroceryItem? item,
     int index = -1,

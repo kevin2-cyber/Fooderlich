@@ -46,7 +46,7 @@ class GroceryTile extends StatelessWidget {
               buildImportance(),
             ],
           ),
-          // TODO 23: Add Row to group (quantity, checkbox)
+          // Add Row to group (quantity, checkbox)
           Row(
             children: [
               // 7
@@ -64,7 +64,7 @@ class GroceryTile extends StatelessWidget {
       ),
     );
   }
-// TODO: Add BuildImportance()
+// Add BuildImportance()
   Widget buildImportance() {
     if (item.importance == Importance.low) {
       return Text(
@@ -89,7 +89,7 @@ class GroceryTile extends StatelessWidget {
       throw Exception('This importance type does not exist');
     }
   }
-
+// Add buildDate()
   Widget buildDate() {
     final dateFormatter = DateFormat('MMMM dd h:mm a');
     final dateString = dateFormatter.format(item.date);
@@ -98,7 +98,7 @@ class GroceryTile extends StatelessWidget {
       style: TextStyle(decoration: textDecoration),
     );
   }
-// TODO: Add buildCheckbox()
+// Add buildCheckbox()
   Widget buildCheckbox() {
     return Checkbox(
       // 1

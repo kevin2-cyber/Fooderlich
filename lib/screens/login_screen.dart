@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../models/models.dart';
 
 class LoginScreen extends StatelessWidget {
-  // TODO: LoginScreen MaterialPage Helper
+  // LoginScreen MaterialPage Helper
   static MaterialPage page() {
     return MaterialPage(
       name: FooderlichPages.loginPath,

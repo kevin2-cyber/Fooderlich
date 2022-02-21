@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../models/models.dart';
 
 class SplashScreen extends StatefulWidget {
-  // TODO: SplashScreen MaterialPage Helper
+  // SplashScreen MaterialPage Helper
   static MaterialPage page() {
     return MaterialPage(
       name: FooderlichPages.splashPath,
@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // TODO: Initialize App
+    // Initialize App
     Provider.of<AppStateManager>(context, listen: false).initializeApp();
   }
 

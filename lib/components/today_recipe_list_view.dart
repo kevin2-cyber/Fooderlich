@@ -54,7 +54,7 @@ class TodayRecipeListView extends StatelessWidget {
     );
   }
 
-// TODO: Add buildCard() widget here
+// Add buildCard() widget here
   Widget buildCard(ExploreRecipe recipe) {
     if (recipe.cardType == RecipeCardType.card1) {
       return Card1(recipe: recipe);
