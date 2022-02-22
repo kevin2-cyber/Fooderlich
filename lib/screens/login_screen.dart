@@ -43,9 +43,9 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              buildTextfield(username ?? '🍔 username'),
+              buildTextField(username ?? '🍔 username'),
               const SizedBox(height: 16),
-              buildTextfield('🎹 password'),
+              buildTextField('🎹 password'),
               const SizedBox(height: 16),
               buildButton(context),
             ],
@@ -61,7 +61,7 @@ class LoginScreen extends StatelessWidget {
       child: MaterialButton(
         color: rwColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(15.0),
         ),
         child: const Text(
           'Login',
@@ -75,17 +75,19 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget buildTextfield(String hintText) {
+  Widget buildTextField(String hintText) {
     return TextField(
       cursorColor: rwColor,
       decoration: InputDecoration(
         border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
           borderSide: BorderSide(
             color: Colors.green,
             width: 1.0,
           ),
         ),
         focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
           borderSide: BorderSide(
             color: Colors.green,
           ),
