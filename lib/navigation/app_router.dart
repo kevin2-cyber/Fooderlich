@@ -3,7 +3,8 @@ import '../models/models.dart';
 import '../screens/screens.dart';
 // 1
 class AppRouter extends RouterDelegate
-    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
+    with ChangeNotifier,
+        PopNavigatorRouterDelegateMixin {
   // 2
   @override
   final GlobalKey<NavigatorState> navigatorKey;
