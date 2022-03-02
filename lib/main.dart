@@ -22,6 +22,7 @@ class _FooderlichState extends State<Fooderlich> {
   // Define AppRouter
   late AppRouter _appRouter;
   // Initialize app router
+  // TODO: Initialize RouteInformationParser
   @override
   void initState() {
     _appRouter = AppRouter(
@@ -53,7 +54,7 @@ class _FooderlichState extends State<Fooderlich> {
           } else {
             theme = FooderlichTheme.light();
           }
-
+          // TODO: Replace with Material.router
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: theme,
