@@ -9,7 +9,7 @@ class AppRouteParser extends RouteInformationParser<AppLink> {
     return link;
   }
   @override
-  RouteInformation restoreRouteinformation(AppLink appLink) {
+  RouteInformation restoreRouteInformation(AppLink appLink) {
     final location = appLink.toLocation();
     return RouteInformation(location: location);
   }
