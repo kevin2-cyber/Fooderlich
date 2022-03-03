@@ -142,7 +142,9 @@ class AppRouter extends RouterDelegate<AppLink>
     }
   }
 
-  // TODO: Apply configuration helper
+  // Apply configuration helper
+  @override
+  AppLink get currentConfiguration => getCurrentPath();
 
   // Replace setNewRoutePath
   @override
