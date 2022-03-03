@@ -156,6 +156,6 @@ class AppRouter extends RouterDelegate<AppLink>
     }
   }
   // 10
-  @override
-  Future<void> setNewRoutePath(configuration) async => null;
+  //@override
+  //Future<void> setNewRoutePath(configuration) async => null;
 }
