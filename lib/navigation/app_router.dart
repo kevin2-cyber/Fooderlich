@@ -121,6 +121,40 @@ class AppRouter extends RouterDelegate<AppLink>
   // TODO: Apply configuration helper
 
   // TODO: Replace setNewRoutePath
+  @override
+  Future<void> setNewRoutePath(AppLink newLink) async {
+    // 2
+    switch (newLink.location) {
+    // 3
+      case AppLink.kProfilePath:
+        profileManager.tapOnProfile(true);
+        break;
+    // 4
+      case AppLink.kItemPath:
+      // 5
+        final itemId = newLink.itemId;
+        if (itemId != null) {
+          groceryManager.setSelectedGroceryItem(itemId);
+        } else {
+          // 6
+          groceryManager.createNewItem();
+        }
+        // 7
+        profileManager.tapOnProfile(false);
+        break;
+    // 8
+      case AppLink.kHomePath:
+      // 9
+        appStateManager.goToTab(newLink.currentTab ?? 0);
+        // 10
+        profileManager.tapOnProfile(false);
+        groceryManager.groceryItemTapped(-1);
+        break;
+    // 11
+      default:
+        break;
+    }
+  }
   // 10
   @override
   Future<void> setNewRoutePath(configuration) async => null;
