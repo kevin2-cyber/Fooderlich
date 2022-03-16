@@ -80,6 +80,7 @@ class FooderlichTheme {
       textTheme: lightTextTheme,
     );
   }
+
   static const lightBgColor = Color(0xFFF6FAFF);
   static const rwColor = Color.fromRGBO(64, 143, 77, 1);
   final TextStyle focusedStyle = const TextStyle(color: Colors.green);
