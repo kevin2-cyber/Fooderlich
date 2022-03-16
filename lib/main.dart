@@ -5,9 +5,7 @@ import 'fooderlich_theme.dart';
 import 'models/models.dart';
 import 'navigation/app_router.dart';
 
-
 void main() => runApp(const Fooderlich());
-
 
 class Fooderlich extends StatefulWidget {
   const Fooderlich({Key? key}) : super(key: key);
@@ -45,8 +43,9 @@ class _FooderlichState extends State<Fooderlich> {
         ChangeNotifierProvider(
           create: (context) => _profileManager,
         ),
-
-        ChangeNotifierProvider(create: (context) => _appStateManager,),
+        ChangeNotifierProvider(
+          create: (context) => _appStateManager,
+        ),
       ],
       child: Consumer<ProfileManager>(
         builder: (context, profileManager, child) {
@@ -56,7 +55,7 @@ class _FooderlichState extends State<Fooderlich> {
           } else {
             theme = FooderlichTheme.light();
           }
-          // TODO: Replace with Material.router
+          // Replace with Material.router
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
             theme: theme,
