@@ -1,6 +1,6 @@
 # Fooderlich
 
- Recipes app
+ Beginner Recipes app 
 
 ## Getting Started 
 
