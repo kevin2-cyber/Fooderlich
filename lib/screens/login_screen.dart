@@ -23,7 +23,6 @@ class LoginScreen extends StatelessWidget {
     this.username,
   }) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +68,8 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: () async {
           // Login -> Navigate to home
-          Provider.of<AppStateManager>(context, listen: false).login('mockUsername', 'mockPassword');
+          Provider.of<AppStateManager>(context, listen: false)
+              .login('mockUsername', 'mockPassword');
         },
       ),
     );
