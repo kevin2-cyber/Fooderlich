@@ -6,7 +6,6 @@ import 'card2.dart';
 import 'card3.dart';
 
 class TodayRecipeListView extends StatelessWidget {
-
   final List<ExploreRecipe> recipes;
 
   const TodayRecipeListView({
@@ -26,11 +25,8 @@ class TodayRecipeListView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-              'Recipes of the Day 🍳',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline1,
+            'Recipes of the Day 🍳',
+            style: Theme.of(context).textTheme.headline1,
           ),
           const SizedBox(height: 16),
           Container(
@@ -46,7 +42,6 @@ class TodayRecipeListView extends StatelessWidget {
               separatorBuilder: (context, index) {
                 return const SizedBox(width: 16);
               },
-
             ),
           ),
         ],
