@@ -7,7 +7,6 @@ enum Importance {
 }
 
 class GroceryItem {
-
   final String id;
   final String name;
   final Importance importance;
@@ -17,14 +16,14 @@ class GroceryItem {
   final bool isComplete;
 
   GroceryItem({
-  required this.id,
-  required this.name,
-  required this.importance,
-  required this.color,
-  required this.quantity,
-  required this.date,
-  this.isComplete = false,
-});
+    required this.id,
+    required this.name,
+    required this.importance,
+    required this.color,
+    required this.quantity,
+    required this.date,
+    this.isComplete = false,
+  });
 
   GroceryItem copyWith({
     String? id,
