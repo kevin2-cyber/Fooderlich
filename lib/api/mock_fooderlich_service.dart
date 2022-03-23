@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:flutter/services.dart';
-
 import '../models/models.dart';
 
 // Mock recipe service that grabs sample json data to mock recipe request/response
