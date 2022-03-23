@@ -54,5 +54,4 @@ class GroceryManager extends ChangeNotifier {
     _groceryItems[index] = item.copyWith(isComplete: change);
     notifyListeners();
   }
-  
 }
