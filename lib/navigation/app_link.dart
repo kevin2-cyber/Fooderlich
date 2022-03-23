@@ -19,8 +19,7 @@ class AppLink {
     location = Uri.decodeFull(location ?? '');
     final uri = Uri.parse(location);
     final params = uri.queryParameters;
-    final currentTab = int.tryParse(params[AppLink.kTabParam] ??
-        '');
+    final currentTab = int.tryParse(params[AppLink.kTabParam] ?? '');
     final itemId = params[AppLink.kIdParam];
     final link = AppLink(
       location: uri.path,
@@ -29,13 +28,14 @@ class AppLink {
     );
     return link;
   }
+
 // Add toLocation
   String toLocation() {
     String addKeyValPair({
       required String key,
       String? value,
     }) =>
-        value == null ? '' : '${key}=$value&';
+        value == null ? '' : '$key=$value&';
     switch (location) {
       case kLoginPath:
         return kLoginPath;
