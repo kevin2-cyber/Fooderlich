@@ -58,6 +58,7 @@ class FooderlichTheme {
     ),
   );
 
+// light theme
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
@@ -86,6 +87,7 @@ class FooderlichTheme {
   final TextStyle focusedStyle = const TextStyle(color: Colors.green);
   final TextStyle unfocusedStyle = const TextStyle(color: Colors.grey);
 
+// dark theme
   static ThemeData dark() {
     return ThemeData(
       brightness: Brightness.dark,
