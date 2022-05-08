@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:recipe_app/navigation/app_route_parser.dart';
 import 'fooderlich_theme.dart';
 import 'models/models.dart';
-import 'navigation/app_router.dart';
+import 'navigation/navigation.dart';
 
 void main() => runApp(const Fooderlich());
 
