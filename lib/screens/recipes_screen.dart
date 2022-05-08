@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import '../api/mock_fooderlich_service.dart';
 import '../components/components.dart';
 import '../models/models.dart';

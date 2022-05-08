@@ -1,6 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:recipe_app/models/models.dart';
 
+// Project imports:
+import 'package:recipe_app/models/models.dart';
 import 'card1.dart';
 import 'card2.dart';
 import 'card3.dart';

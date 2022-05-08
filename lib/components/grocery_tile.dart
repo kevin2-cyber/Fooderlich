@@ -1,7 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:recipe_app/models/models.dart';
+
+// Package imports:
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+
+// Project imports:
+import 'package:recipe_app/models/models.dart';
 
 class GroceryTile extends StatelessWidget {
   final GroceryItem item;

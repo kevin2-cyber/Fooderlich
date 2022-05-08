@@ -1,7 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import '../api/mock_fooderlich_service.dart';
 import '../components/components.dart';
 import '../models/models.dart';
-import '../api/mock_fooderlich_service.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({Key? key}) : super(key: key);

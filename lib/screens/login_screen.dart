@@ -1,7 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:recipe_app/fooderlich_theme.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
 
+// Project imports:
+import 'package:recipe_app/fooderlich_theme.dart';
 import '../models/models.dart';
 
 class LoginScreen extends StatelessWidget {

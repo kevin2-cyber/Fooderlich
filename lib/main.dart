@@ -1,5 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
+
+// Project imports:
 import 'fooderlich_theme.dart';
 import 'models/models.dart';
 import 'navigation/navigation.dart';
