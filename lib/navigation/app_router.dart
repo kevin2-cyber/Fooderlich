@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/navigation/app_link.dart';
+import 'package:recipe_app/navigation/navigation.dart';
 import '../models/models.dart';
 import '../screens/screens.dart';
 class AppRouter extends RouterDelegate<AppLink>
