@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/navigation/navigation.dart';
 import '../models/models.dart';
 import '../screens/screens.dart';
+
 class AppRouter extends RouterDelegate<AppLink>
-    with ChangeNotifier,
-        PopNavigatorRouterDelegateMixin {
+    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
   @override
   final GlobalKey<NavigatorState> navigatorKey;
   final AppStateManager appStateManager;
@@ -14,9 +14,7 @@ class AppRouter extends RouterDelegate<AppLink>
     required this.appStateManager,
     required this.groceryManager,
     required this.profileManager,
-  })
-      : navigatorKey = GlobalKey<NavigatorState>() {
-
+  }) : navigatorKey = GlobalKey<NavigatorState>() {
     // Add Listeners
     appStateManager.addListener(notifyListeners);
     groceryManager.addListener(notifyListeners);
@@ -30,6 +28,7 @@ class AppRouter extends RouterDelegate<AppLink>
     profileManager.removeListener(notifyListeners);
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Navigator(
@@ -40,20 +39,24 @@ class AppRouter extends RouterDelegate<AppLink>
         // SplashScreen
         if (!appStateManager.isInitialized) SplashScreen.page(),
         // LoginScreen
-        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)LoginScreen.page(),
+        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+          LoginScreen.page(),
         // OnboardingScreen
-        if (appStateManager.isLoggedIn && !appStateManager.isOnboardingComplete)OnboardingScreen.page(),
+        if (appStateManager.isLoggedIn && !appStateManager.isOnboardingComplete)
+          OnboardingScreen.page(),
         // Home
-        if (appStateManager.isOnboardingComplete)Home.page(appStateManager.getSelectedTab),
+        if (appStateManager.isOnboardingComplete)
+          Home.page(appStateManager.getSelectedTab),
         // Create new item
         if (groceryManager.isCreatingNewItem)
-        GroceryItemScreen.page(
-          onCreate: (item) {
-            groceryManager.addItem(item);
-          }, onUpdate: (item, index) {
-          // No update
-        },
-        ),
+          GroceryItemScreen.page(
+            onCreate: (item) {
+              groceryManager.addItem(item);
+            },
+            onUpdate: (item, index) {
+              // No update
+            },
+          ),
         // Select GroceryItemScreen
         if (groceryManager.selectedIndex != -1)
           GroceryItemScreen.page(
@@ -64,19 +67,18 @@ class AppRouter extends RouterDelegate<AppLink>
               },
               onCreate: (_) {
                 // No create
-              }
-          ),
+              }),
         // Add Profile Screen
-        if (profileManager.didSelectUser)ProfileScreen.page(profileManager.getUser),
+        if (profileManager.didSelectUser)
+          ProfileScreen.page(profileManager.getUser),
         // Add WebView Screen
-        if (profileManager.didTapOnRaywenderlich)WebViewScreen.page(),
+        if (profileManager.didTapOnRaywenderlich) WebViewScreen.page(),
       ],
     );
   }
+
   // _handlePopPage
-  bool _handlePopPage(
-      Route<dynamic> route,
-      result) {
+  bool _handlePopPage(Route<dynamic> route, result) {
     if (!route.didPop(result)) {
       return false;
     }
@@ -98,6 +100,7 @@ class AppRouter extends RouterDelegate<AppLink>
     }
     return true;
   }
+
   // Convert app state to applink
   AppLink getCurrentPath() {
     if (!appStateManager.isLoggedIn) {
