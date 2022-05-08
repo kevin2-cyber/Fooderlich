@@ -26,6 +26,7 @@ dependencies:
   webview_flutter: ^3.0.0
   url_launcher: ^6.0.20
   shared_preferences: ^2.0.13
+  import_sorter: ^4.6.0
 
 dev_dependencies:
   flutter_test:
