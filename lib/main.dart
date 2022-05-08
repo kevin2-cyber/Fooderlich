@@ -21,7 +21,7 @@ class _FooderlichState extends State<Fooderlich> {
   // Define AppRouter
   late AppRouter _appRouter;
   // Initialize app router
-  // TODO: Initialize RouteInformationParser
+  // Initialize RouteInformationParser
   final routeParser = AppRouteParser();
   @override
   void initState() {
