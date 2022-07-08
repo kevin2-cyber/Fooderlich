@@ -1,6 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:recipe_app/components/components.dart';
 
+// Project imports:
+import 'package:recipe_app/components/components.dart';
 import '../models/models.dart';
 
 class FriendPostTile extends StatelessWidget {
@@ -31,7 +33,7 @@ class FriendPostTile extends StatelessWidget {
               Text(
                 '${post.timestamp} mins ago',
                 style: const TextStyle(
-                    fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ],

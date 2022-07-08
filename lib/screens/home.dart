@@ -1,8 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
+
+// Project imports:
 import '../models/models.dart';
 import 'screens.dart';
-// import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   // Home MaterialPage Helper
@@ -40,40 +44,42 @@ class _HomeState extends State<Home> {
     return Consumer<AppStateManager>(
       builder: (context, appStateManager, child) {
         return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Fooderlich',
-            style: Theme.of(context).textTheme.headline6,
+          appBar: AppBar(
+            title: Text(
+              'Fooderlich',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+            actions: [
+              profileButton(),
+            ],
           ),
-          actions: [
-            profileButton(),
-          ],
-        ),
-        body: IndexedStack(index: widget.currentTab, children: pages),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-          currentIndex: widget.currentTab,
-          onTap: (index) {
-            // Update user's selected tab
-            Provider.of<AppStateManager>(context, listen: false).goToTab(index);
-          },
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.explore),
-              label: 'Explore',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.book),
-              label: 'Recipes',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              label: 'To Buy',
-            ),
-          ],
-        ),
-      );
-    },
+          body: IndexedStack(index: widget.currentTab, children: pages),
+          bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor:
+                Theme.of(context).textSelectionTheme.selectionColor,
+            currentIndex: widget.currentTab,
+            onTap: (index) {
+              // Update user's selected tab
+              Provider.of<AppStateManager>(context, listen: false)
+                  .goToTab(index);
+            },
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.explore),
+                label: 'Explore',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.book),
+                label: 'Recipes',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.list),
+                label: 'To Buy',
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 
@@ -89,7 +95,8 @@ class _HomeState extends State<Home> {
         ),
         onTap: () {
           // home -> profile
-          Provider.of<ProfileManager>(context, listen: false).tapOnProfile(true);
+          Provider.of<ProfileManager>(context, listen: false)
+              .tapOnProfile(true);
         },
       ),
     );

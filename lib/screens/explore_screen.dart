@@ -1,11 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
+import '../api/mock_fooderlich_service.dart';
 import '../components/components.dart';
 import '../models/models.dart';
-import '../api/mock_fooderlich_service.dart';
 
 class ExploreScreen extends StatefulWidget {
-
   const ExploreScreen({Key? key}) : super(key: key);
 
   @override
@@ -24,8 +25,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           return ListView(
             scrollDirection: Axis.vertical,
             children: [
-              TodayRecipeListView(recipes:
-              snapshot.data?.todayRecipes ?? []),
+              TodayRecipeListView(recipes: snapshot.data?.todayRecipes ?? []),
               const SizedBox(height: 16),
               FriendPostListView(friendPosts: snapshot.data?.friendPosts ?? []),
             ],

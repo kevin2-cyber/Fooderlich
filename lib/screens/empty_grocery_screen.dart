@@ -1,8 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
 
+// Project imports:
 import '../models/models.dart';
-
 
 class EmptyGroceryScreen extends StatelessWidget {
   const EmptyGroceryScreen({Key? key}) : super(key: key);
@@ -28,7 +31,7 @@ class EmptyGroceryScreen extends StatelessWidget {
             const SizedBox(height: 16.0),
             const Text(
               'Shopping for ingredients?\n'
-                  'Tap the + button to write them down!',
+              'Tap the + button to write them down!',
               textAlign: TextAlign.center,
             ),
             MaterialButton(
@@ -40,7 +43,8 @@ class EmptyGroceryScreen extends StatelessWidget {
               color: Colors.green,
               onPressed: () {
                 // Update user's selected tab
-                Provider.of<AppStateManager>(context, listen: false).goToRecipes();
+                Provider.of<AppStateManager>(context, listen: false)
+                    .goToRecipes();
               },
             ),
           ],

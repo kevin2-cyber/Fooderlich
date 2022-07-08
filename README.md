@@ -1,10 +1,10 @@
 # Fooderlich
 
- Recipes app
+ Beginner Recipes app 
 
 ## Getting Started 
-
 Using the flutter apprentice book as a guide.
+patch-1
 Using Model View Controller as an architectural pattern. 
 
 ---
@@ -45,4 +45,7 @@ reference to help you build up an application.
 - [Create an expandable FAB]({{site.url}}/cookbook/effects/expandable-fab)
 - [Create gradient chat bubbles]({{site.url}}/cookbook/effects/gradient-bubbles)
 - [Drag a UI element]({{site.url}}/cookbook/effects/drag-a-widget)
+
+Using Navigator 2.0 as navigation and a mock json file
+
 

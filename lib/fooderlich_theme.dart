@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:google_fonts/google_fonts.dart';
 
 class FooderlichTheme {
@@ -58,6 +61,7 @@ class FooderlichTheme {
     ),
   );
 
+// light theme
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
@@ -80,11 +84,13 @@ class FooderlichTheme {
       textTheme: lightTextTheme,
     );
   }
+
   static const lightBgColor = Color(0xFFF6FAFF);
   static const rwColor = Color.fromRGBO(64, 143, 77, 1);
   final TextStyle focusedStyle = const TextStyle(color: Colors.green);
   final TextStyle unfocusedStyle = const TextStyle(color: Colors.grey);
 
+// dark theme
   static ThemeData dark() {
     return ThemeData(
       brightness: Brightness.dark,

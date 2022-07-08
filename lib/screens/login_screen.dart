@@ -1,7 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:recipe_app/fooderlich_theme.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
 
+// Project imports:
+import 'package:recipe_app/fooderlich_theme.dart';
 import '../models/models.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -22,7 +26,6 @@ class LoginScreen extends StatelessWidget {
     Key? key,
     this.username,
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +72,8 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: () async {
           // Login -> Navigate to home
-          Provider.of<AppStateManager>(context, listen: false).login('mockUsername', 'mockPassword');
+          Provider.of<AppStateManager>(context, listen: false)
+              .login('mockUsername', 'mockPassword');
         },
       ),
     );

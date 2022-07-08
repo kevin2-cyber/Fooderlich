@@ -1,20 +1,24 @@
-import'package:flutter/material.dart';
-import 'package:recipe_app/models/models.dart';
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-class GroceryTile extends StatelessWidget {
+// Project imports:
+import 'package:recipe_app/models/models.dart';
 
+class GroceryTile extends StatelessWidget {
   final GroceryItem item;
   final Function(bool?)? onComplete;
   final TextDecoration textDecoration;
 
   GroceryTile({
-    Key? key, required this.item,
+    Key? key,
+    required this.item,
     this.onComplete,
-  }) : textDecoration =
-  item.isComplete ? TextDecoration.lineThrough :
-  TextDecoration.none,
+  })  : textDecoration =
+            item.isComplete ? TextDecoration.lineThrough : TextDecoration.none,
         super(key: key);
 
   @override
@@ -23,7 +27,7 @@ class GroceryTile extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // TODO 22: Add Row to group (name, date, importance)
+          // Add Row to group (name, date, importance)
           Container(width: 5.0, color: item.color),
 // 3
           const SizedBox(width: 16.0),
@@ -50,11 +54,10 @@ class GroceryTile extends StatelessWidget {
           Row(
             children: [
               // 7
-              Text(item.quantity.toString(),
-                style:
-                GoogleFonts.lato(
-                    decoration: textDecoration,
-                    fontSize: 21.0),
+              Text(
+                item.quantity.toString(),
+                style: GoogleFonts.lato(
+                    decoration: textDecoration, fontSize: 21.0),
               ),
               // 8
               buildCheckbox(),
@@ -64,18 +67,15 @@ class GroceryTile extends StatelessWidget {
       ),
     );
   }
+
 // Add BuildImportance()
   Widget buildImportance() {
     if (item.importance == Importance.low) {
-      return Text(
-      'Low',
-          style: GoogleFonts.lato(decoration: textDecoration));
+      return Text('Low', style: GoogleFonts.lato(decoration: textDecoration));
     } else if (item.importance == Importance.medium) {
-      return Text(
-          'Medium',
+      return Text('Medium',
           style: GoogleFonts.lato(
-              fontWeight: FontWeight.w800,
-              decoration: textDecoration));
+              fontWeight: FontWeight.w800, decoration: textDecoration));
     } else if (item.importance == Importance.high) {
       return Text(
         'High',
@@ -89,6 +89,7 @@ class GroceryTile extends StatelessWidget {
       throw Exception('This importance type does not exist');
     }
   }
+
 // Add buildDate()
   Widget buildDate() {
     final dateFormatter = DateFormat('MMMM dd h:mm a');
@@ -98,6 +99,7 @@ class GroceryTile extends StatelessWidget {
       style: TextStyle(decoration: textDecoration),
     );
   }
+
 // Add buildCheckbox()
   Widget buildCheckbox() {
     return Checkbox(

@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import 'grocery_item.dart';
 
 class GroceryManager extends ChangeNotifier {
@@ -54,5 +56,4 @@ class GroceryManager extends ChangeNotifier {
     _groceryItems[index] = item.copyWith(isComplete: change);
     notifyListeners();
   }
-  
 }

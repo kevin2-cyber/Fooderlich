@@ -1,7 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+// Project imports:
 import '../models/models.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -61,7 +65,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: const Text('Skip'),
           onPressed: () {
             // Onboarding -> Navigate to home
-            Provider.of<AppStateManager>(context, listen: false).completeOnboarding();
+            Provider.of<AppStateManager>(context, listen: false)
+                .completeOnboarding();
           },
         ),
       ],
