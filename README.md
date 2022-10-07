@@ -6,7 +6,6 @@
 Using the flutter apprentice book as a guide.
 Using Model View Controller as an architectural pattern. 
 
----
 title: Cookbook
 description: The Flutter cookbook provides recipes for many commonly performed tasks.
 ---
