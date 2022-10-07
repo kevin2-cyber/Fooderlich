@@ -4,7 +4,6 @@
 
 ## Getting Started 
 Using the flutter apprentice book as a guide.
-patch-1
 Using Model View Controller as an architectural pattern. 
 
 ---
