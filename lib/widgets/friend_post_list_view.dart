@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import '../models/models.dart';
-import 'components.dart';
+import 'widgets.dart';
 
 class FriendPostListView extends StatelessWidget {
   final List<Post> friendPosts;

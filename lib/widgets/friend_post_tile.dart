@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:recipe_app/components/components.dart';
+import 'package:recipe_app/widgets/widgets.dart';
 import '../models/models.dart';
 
 class FriendPostTile extends StatelessWidget {

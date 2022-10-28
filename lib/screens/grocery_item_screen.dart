@@ -8,7 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
 // Project imports:
-import '../components/grocery_tile.dart';
+import '../widgets/grocery_tile.dart';
 import '../models/models.dart';
 
 class GroceryItemScreen extends StatefulWidget {

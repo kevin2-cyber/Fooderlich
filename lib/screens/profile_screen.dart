@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // Project imports:
-import '../components/circle_image.dart';
+import '../widgets/circle_image.dart';
 import '../models/models.dart';
 
 class ProfileScreen extends StatefulWidget {
