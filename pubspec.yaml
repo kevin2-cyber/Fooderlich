@@ -17,7 +17,7 @@ dependencies:
 
 
   cupertino_icons: ^1.0.4
-  google_fonts: ^2.3.1
+  google_fonts: ^3.0.1
   provider: ^6.0.2
   flutter_colorpicker: ^1.0.3
   intl: ^0.17.0
@@ -32,7 +32,7 @@ dev_dependencies:
     sdk: flutter
 
 
-  flutter_lints: ^1.0.4
+  flutter_lints: ^2.0.1
   import_sorter: ^4.6.0
 
 
